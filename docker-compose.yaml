@@ -1,20 +1,20 @@
 
 
 services:
-  app:
-    build: .
-    container_name: nextApp
-    platform: linux/amd64
-    ports:
-      - "3000:3000"
-    environment:
-      - DATABASE_URL=mongodb://root:prisma@localhost:27017/db?authSource=admin&directConnection=true
-      - SECRET=your-secret-key
-      - NEXT_PUBLIC_URL=http://localhost:3000
-    depends_on:
-      - mongodb
-    networks:
-      - app-network
+  # app:
+  #   build: .
+  #   container_name: nextApp
+  #   platform: linux/amd64
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - DATABASE_URL=mongodb://root:prisma@localhost:27017/db?authSource=admin&directConnection=true
+  #     - SECRET=your-secret-key
+  #     - NEXT_PUBLIC_URL=http://localhost:3000
+  #   depends_on:
+  #     - mongodb
+  #   networks:
+  #     - app-network
 
   mongodb:
     # This image automatically creates a replica set required for transactions
