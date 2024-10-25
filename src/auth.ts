@@ -4,9 +4,7 @@ import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
 import { User } from '@/libs/definitions';
 import { PrismaAdapter } from "@auth/prisma-adapter"
-import { PrismaClient } from "@prisma/client"
-
-const prisma = new PrismaClient()
+import prisma from '@/libs/prisma'
 
 export const { auth,
   signIn,
